@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Lock,
-  Database,
-  UserCheck,
-  ShareNetwork,
-  Clock,
-  ShieldCheck,
-  Trash,
-  Globe,
-  Envelope,
-  ArrowLeft,
+  LockIcon,
+  DatabaseIcon,
+  UserCheckIcon,
+  ShareNetworkIcon,
+  ClockIcon,
+  ShieldCheckIcon,
+  TrashIcon,
+  GlobeIcon,
+  EnvelopeIcon,
+  ArrowLeftIcon,
 } from "@phosphor-icons/react/dist/ssr";
-import type { Icon } from "@phosphor-icons/react/dist/ssr";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import type { Icon } from "@phosphor-icons/react";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | KTU SRC App",
@@ -33,7 +33,7 @@ const sections: Section[] = [
   {
     id: "overview",
     title: "Privacy Overview",
-    icon: Lock,
+    icon: LockIcon,
     content: `The KTU SRC App is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.
 
 We encourage you to read this policy carefully. By using the app, you consent to the data practices described in this policy.`,
@@ -41,7 +41,7 @@ We encourage you to read this policy carefully. By using the app, you consent to
   {
     id: "data-collection",
     title: "Information We Collect",
-    icon: Database,
+    icon: DatabaseIcon,
     content: `We collect information that you provide directly:
 
 • Account Information: Name, student ID, email, phone number
@@ -57,7 +57,7 @@ We automatically collect:
   {
     id: "data-usage",
     title: "How We Use Your Data",
-    icon: UserCheck,
+    icon: UserCheckIcon,
     content: `We use your information to:
 
 • Provide and maintain the app services
@@ -73,7 +73,7 @@ We will never sell your personal information to third parties.`,
   {
     id: "data-sharing",
     title: "Information Sharing",
-    icon: ShareNetwork,
+    icon: ShareNetworkIcon,
     content: `We may share your information with:
 
 • University Administration: For academic and administrative purposes
@@ -85,7 +85,7 @@ All third parties are contractually obligated to protect your data and use it on
   {
     id: "data-retention",
     title: "Data Retention",
-    icon: Clock,
+    icon: ClockIcon,
     content: `We retain your personal information for as long as:
 
 • Your account remains active
@@ -98,7 +98,7 @@ After graduation or account deletion, we may retain anonymized data for statisti
   {
     id: "data-security",
     title: "Data Security",
-    icon: ShieldCheck,
+    icon: ShieldCheckIcon,
     content: `We implement appropriate security measures including:
 
 • Encryption of data in transit and at rest
@@ -112,7 +112,7 @@ While we strive to protect your data, no method of transmission over the interne
   {
     id: "your-rights",
     title: "Your Privacy Rights",
-    icon: UserCheck,
+    icon: UserCheckIcon,
     content: `You have the right to:
 
 • Access: Request a copy of your personal data
@@ -127,7 +127,7 @@ To exercise these rights, contact us through the app or via email.`,
   {
     id: "data-deletion",
     title: "Account & Data Deletion",
-    icon: Trash,
+    icon: TrashIcon,
     content: `You can request account deletion at any time through:
 
 • App Settings > Profile > Delete Account
@@ -142,7 +142,7 @@ Upon deletion request:
   {
     id: "international",
     title: "International Data",
-    icon: Globe,
+    icon: GlobeIcon,
     content: `Your information may be transferred to and processed in countries other than Ghana. These countries may have different data protection laws.
 
 By using the app, you consent to the transfer of your information to Ghana and other countries where we operate. We ensure appropriate safeguards are in place for international transfers.`,
@@ -150,7 +150,7 @@ By using the app, you consent to the transfer of your information to Ghana and o
   {
     id: "contact",
     title: "Contact Us",
-    icon: Envelope,
+    icon: EnvelopeIcon,
     content: `For privacy-related questions or concerns:
 
 Data Protection — KTU SRC App
@@ -176,7 +176,7 @@ export default function PrivacyPage() {
       {/* ── Page Header ── */}
       <section className="relative overflow-hidden bg-[oklch(0.22_0.09_155)] text-white">
         <div className="absolute inset-0" style={dotGrid} />
-        <div className="absolute -right-24 top-1/2 size-64 -translate-y-1/2 rounded-full border border-white/[0.06]" />
+        <div className="absolute -right-24 top-1/2 size-64 -translate-y-1/2 rounded-full border border-white/6" />
 
         <div className="relative mx-auto max-w-5xl px-4 py-16 md:py-20">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] tracking-wide">
@@ -194,7 +194,7 @@ export default function PrivacyPage() {
           </p>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-background to-transparent" />
       </section>
 
       <div className="mx-auto w-full max-w-5xl px-4 py-12 lg:py-16">
@@ -251,7 +251,7 @@ export default function PrivacyPage() {
                               className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground"
                             >
                               <span
-                                className="mt-[0.4em] size-1.5 flex-shrink-0 rounded-full bg-primary/50"
+                                className="mt-[0.4em] size-1.5 shrink-0 rounded-full bg-primary/50"
                               />
                               {line.replace(/^•\s*/, "")}
                             </li>
@@ -286,7 +286,7 @@ export default function PrivacyPage() {
                 href="/support"
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
               >
-                <ArrowLeft className="size-3.5" />
+                <ArrowLeftIcon className="size-3.5" />
                 Back to Support
               </Link>
               <Link

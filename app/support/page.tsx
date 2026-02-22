@@ -53,7 +53,7 @@ export default function SupportPage() {
       {/* ── Page Header ── */}
       <section className="relative overflow-hidden bg-[oklch(0.22_0.09_155)] text-white">
         <div className="absolute inset-0" style={dotGrid} />
-        <div className="absolute -right-24 top-1/2 size-64 -translate-y-1/2 rounded-full border border-white/[0.06]" />
+        <div className="absolute -right-24 top-1/2 size-64 -translate-y-1/2 rounded-full border border-white/6" />
 
         <div className="relative mx-auto max-w-5xl px-4 py-16 md:py-20">
           <div
@@ -73,7 +73,7 @@ export default function SupportPage() {
           </p>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-background to-transparent" />
       </section>
 
       <div className="mx-auto w-full max-w-5xl px-4 py-16 space-y-16">
